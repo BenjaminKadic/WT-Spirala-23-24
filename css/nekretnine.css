@@ -1,0 +1,48 @@
+body {
+  background-color: #fdf1d3;
+}
+
+h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.nekretnine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.nekretnina {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#kuca .nekretnina {
+  background-color: powderblue;
+}
+
+#pp .nekretnina {
+  background-color: green;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.naziv,
+.kvadratura {
+  text-align: left;
+}
+
+.cijena {
+  text-align: right;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}

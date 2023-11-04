@@ -1,0 +1,16 @@
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: blue;
+}
+
+.fixed-menu iframe {
+    width: 100%;
+    height: 60px;
+    border: 0;
+}
+
+.content {
+    margin-top: 60px;
+}
