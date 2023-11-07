@@ -20,5 +20,8 @@ input {
     padding: 10px;
     margin-bottom: 30px;
     border: none;
-    color: grey;
+}
+
+img {
+    width: 30%;
 }
