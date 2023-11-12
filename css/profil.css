@@ -4,6 +4,8 @@ body {
 
 #profil-info {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #detalji {
@@ -13,8 +15,8 @@ body {
 label {
     display: inline-block;
     width: 200px;
+    margin-bottom: 10px; 
 }
-
 
 input {
     padding: 10px;
@@ -22,6 +24,24 @@ input {
     border: none;
 }
 
-img {
-    width: 30%;
+#profil-info img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+@media screen and (min-width: 500px) {
+    #profil-info {
+        flex-direction: row; 
+        justify-content: center; 
+    }
+
+    #profil-info img {
+        max-width: 50%; 
+        max-height: 50%;
+        width: auto; 
+        height: auto;
+        margin-right: 20px; 
+    }
+
 }

@@ -1,0 +1,1 @@
+profil_info postavljen da je display:flex i dodan media query pomocu kojeg se provjerava sirina ekrana, te ukoliko je siri od 500px se postavlja flex direction u profil_info na row te se na taj nacin slika postavlja lijevo od polja sa podacima.
