@@ -23,22 +23,21 @@ function spojiNekretnine(divReferenca, instancaModula, tip_nekretnine) {
     }
 }
 
-const listaNekretnina = [
-    //podaci
-];
+PoziviAjax.getNekretnine(function(status, data) {
+    if (status) {
+        const nekretnineSaServera = JSON.parse(data);
 
+        // Instanciranje modula s novim podacima
+        const nekretnineModul = SpisakNekretnina();
+        nekretnineModul.init(nekretnineSaServera, listaKorisnika);
 
-const listaKorisnika = [
-    // podaci
-];
+        // Pozivanje funkcije za prikaz nekretnina
+        spojiNekretnine(document.getElementById("stan"), nekretnineModul, "Stan");
+        spojiNekretnine(document.getElementById("kuca"), nekretnineModul, "Kuća");
+        spojiNekretnine(document.getElementById("pp"), nekretnineModul, "Poslovni prostor");
+    } else {
+        console.error('Greška prilikom dohvaćanja nekretnina sa servera.');
+    }
+});
 
-// instanciranje modula
-const nekretnineModul = SpisakNekretnina();
-nekretnineModul.init(listaNekretnina, listaKorisnika);
-
-// pozivanje funkcije za prikaz nekretnina
-spojiNekretnine(document.getElementById("stan"), nekretnineModul, "Stan");
-spojiNekretnine(document.getElementById("kuca"), nekretnineModul, "Kuća");
-spojiNekretnine(document.getElementById("pp"), nekretnineModul, "Poslovni prostor");
-
-
+const listaKorisnika = []
