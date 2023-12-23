@@ -14,16 +14,16 @@ let SpisakNekretnina = function () {
             if (kriterij.tip_nekretnine && nekretnina.tip_nekretnine !== kriterij.tip_nekretnine) {
                 return false;
             }
-            if (kriterij.min_kvadratura && nekretnina.kvadratura <= kriterij.min_kvadratura) {
+            if (kriterij.min_kvadratura && nekretnina.kvadratura < kriterij.min_kvadratura) {
                 return false;
             }
-            if (kriterij.max_kvadratura && nekretnina.kvadratura >= kriterij.max_kvadratura) {
+            if (kriterij.max_kvadratura && nekretnina.kvadratura > kriterij.max_kvadratura) {
                 return false;
             }
-            if (kriterij.min_cijena && nekretnina.cijena <= kriterij.min_cijena) {
+            if (kriterij.min_cijena && nekretnina.cijena < kriterij.min_cijena) {
                 return false;
             }
-            if (kriterij.max_cijena && nekretnina.cijena >= kriterij.max_cijena) {
+            if (kriterij.max_cijena && nekretnina.cijena > kriterij.max_cijena) {
                 return false;
             }
             return true;
