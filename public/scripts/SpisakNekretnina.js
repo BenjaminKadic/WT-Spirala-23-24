@@ -10,6 +10,10 @@ let SpisakNekretnina = function () {
     };
 
     let filtrirajNekretnine = function (kriterij) {
+        if(kriterij == null) 
+        {
+            return listaNekretnina;
+        }
         return listaNekretnina.filter(nekretnina => {
             if (kriterij.tip_nekretnine && nekretnina.tip_nekretnine !== kriterij.tip_nekretnine) {
                 return false;

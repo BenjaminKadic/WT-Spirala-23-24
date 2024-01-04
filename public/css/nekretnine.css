@@ -7,7 +7,7 @@ h2 {
   text-align: center;
 }
 
-.nekretnine {
+#kuca, #stan, #pp {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   grid-gap: 20px;
@@ -85,4 +85,28 @@ img {
 
 .search-container button:hover {
   background-color: #ff9900;
+}
+
+.nekretnina .pretrage, .nekretnina .klikovi {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #eee;
+}
+
+.nekretnina .br_pretraga, .nekretnina .br_klikova {
+  font-weight: bold;
+  color: #333;
+}
+
+#kuca .nekretnina .pretrage, #kuca .nekretnina .klikovi {
+  background-color: lightblue;
+}
+
+#pp .nekretnina .pretrage, #pp .nekretnina .klikovi {
+  background-color: lightgreen;
+}
+
+.veliki {
+  width: 500px !important;
+  grid-column: span 2 !important;
 }
