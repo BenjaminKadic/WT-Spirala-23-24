@@ -2,7 +2,7 @@ body {
     background-color: #fdf1d3;
 }
 
-img{
+img {
     padding: 20px;
 }
 
@@ -23,7 +23,7 @@ h3 {
     grid-template-columns: 2fr 1fr;
 }
 
-#upiti{
+#upiti {
     padding: 20px;
     list-style: none;
 }
@@ -36,5 +36,37 @@ h3 {
 }
 
 img {
-    width: 97%
+    width: 97%;
+}
+
+#upit-input-container {
+    max-width: 900px;
+    /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#inputUpit {
+    border-radius: 4px;
+    height: 100%;
+}
+
+#submitButton {
+    background-color: blue;
+    color: #fff;
+    border-radius: 4px;
+    border-color: blue;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: #ff9900;
+    border-color: #ff9900;
 }

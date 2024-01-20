@@ -7,6 +7,7 @@ function callback(status){
 };
 
 function updateMenu(isLoggedIn) {
+    if(!isLoggedIn) isLoggedIn=false
     var menuItems = document.querySelectorAll("#navigacija ul li");
   
     menuItems.forEach(function (item) {
@@ -33,12 +34,10 @@ function updateMenu(isLoggedIn) {
         });
         odjavaButton.parentElement.style.display = "inline";
         document.getElementById("nekretnine").parentElement.style.display = "inline";
-        document.getElementById("detalji").parentElement.style.display = "inline";
         document.getElementById("profil").parentElement.style.display = "inline";
     } else {
         prijavaLink.parentElement.style.display = "inline";
         document.getElementById("nekretnine").parentElement.style.display = "inline";
-        document.getElementById("detalji").parentElement.style.display = "inline";
         document.getElementById("profil").parentElement.style.display = "none";
     }
 }

@@ -131,12 +131,32 @@ const PoziviAjax = (() => {
         ajax.send(null);
     }
 
+    function impl_getNekretninaById(nekretnina_id, fnCallback) {
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET", `/nekretnina/${nekretnina_id}`, true);
+    
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                    const data = JSON.parse(ajax.responseText);
+                    fnCallback(true, data);
+                } else {
+                    fnCallback(false);
+                }
+            }
+        };
+    
+        ajax.send(null);
+    }
+    
+
     return {
         postLogin: impl_postLogin,
         postLogout: impl_postLogout,
         getKorisnik: impl_getKorisnik,
         putKorisnik: impl_putKorisnik,
         postUpit: impl_postUpit,
-        getNekretnine: impl_getNekretnine
+        getNekretnine: impl_getNekretnine,
+        getNekretninaById: impl_getNekretninaById
     };
 })();
