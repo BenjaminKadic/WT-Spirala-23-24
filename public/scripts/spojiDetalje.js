@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (status) {
                         updateHtmlWithNekretninaDetails(nekretnina);
 
-                        // Dodaj input polje za postavljanje upita
+
                         addUpitInputField(nekretninaId, korisnik);
                     } else {
                         updateHtmlWithNekretninaDetails(nekretnina);
@@ -51,12 +51,10 @@ function postUpit(nekretninaId, korisnik) {
     if (upitInput && nekretninaId && korisnik) {
         const tekstUpita = upitInput.value;
 
-        // Pozovi metodu koja postavlja upit na serveru
-        // Zamijenite PoziviAjax.postUpit s odgovarajućim AJAX pozivom
         PoziviAjax.postUpit(nekretninaId, tekstUpita, function (status, poruka) {
             if (status) {
                 console.log('Upit uspješno postavljen.');
-                // Ažuriraj prikaz upita
+
                 updateUpiti(nekretninaId);
             } else {
                 console.error('Greška prilikom postavljanja upita: ' + poruka);
@@ -66,7 +64,7 @@ function postUpit(nekretninaId, korisnik) {
 }
 
 function updateHtmlWithNekretninaDetails(nekretnina) {
-    // Ažuriraj osnovne informacije
+
     document.getElementById('osnovno').innerHTML = `
             <img src="${nekretnina.slika}" alt="Nekretnina">
             <p><b>Naziv</b>: ${nekretnina.naziv}</p>
@@ -74,7 +72,7 @@ function updateHtmlWithNekretninaDetails(nekretnina) {
             <p><b>Cijena</b>: ${nekretnina.cijena} KM</p>
         `;
 
-    // Ažuriraj detalje
+
     document.getElementById('detalji').innerHTML = `
             <div class="info">
                 <p><b>Tip Grijanja</b>: ${nekretnina.tip_grijanja}</p>
